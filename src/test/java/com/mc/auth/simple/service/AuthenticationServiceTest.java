@@ -5,7 +5,6 @@ import com.mc.auth.simple.dao.User;
 import com.mc.auth.simple.repository.AuthenticationRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
@@ -35,7 +34,6 @@ class AuthenticationServiceTest {
 	}
 
 	@Test
-	@Disabled
 	void loginShouldFailIfAWrongPasswordIsProvided() {
 		service.saveUser(new User("user", new Password("xxx")));
 		Mockito.verify(repository, Mockito.times(1)).save(Mockito.any());
@@ -46,7 +44,6 @@ class AuthenticationServiceTest {
 	}
 
 	@Test
-	@Disabled
 	void usersCountShouldIncreaseAfterSavingANewUser() {
 		var expectedValue = repository.count() + 1;
 		service.saveUser(new User("user", new Password("test")));

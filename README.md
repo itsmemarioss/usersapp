@@ -3,7 +3,7 @@
 Sample app to save users.
 
 ```bash
-./mvnw clean package -DskipTests
+./mvnw clean package
 ```
 
 ## HTTP Requests
