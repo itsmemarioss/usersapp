@@ -22,4 +22,8 @@ public class AuthenticationRepository {
 		return users.stream().filter( us -> us.getName().equals(username)).findFirst();
 	}
 
+	public int count(){
+		return users.size();
+	}
+
 }

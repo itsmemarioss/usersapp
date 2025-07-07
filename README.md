@@ -1,13 +1,14 @@
 ## Overview
 
-Sample app to save users
+Sample app to save users.
 
+```bash
+./mvnw clean package -DskipTests
+```
 
-## Development
+## HTTP Requests
 
-Example http requests:
-
-
+Add a new user
 ```
 curl --location --request POST 'http://localhost:8080/save' \
 --header 'Content-Type: application/json' \
@@ -17,6 +18,7 @@ curl --location --request POST 'http://localhost:8080/save' \
 }'
 ```
 
+User login
 ```
 curl --location --request GET 'http://localhost:8080/login' \
 --header 'Content-Type: application/json' \
